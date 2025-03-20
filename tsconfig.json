@@ -25,8 +25,8 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "declarationDir": "./lib/types"
+    "declarationDir": "./dist/types"
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "lib"]
+  "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }

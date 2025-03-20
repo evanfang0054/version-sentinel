@@ -1,6 +1,6 @@
 {
   "name": "version-sentinel",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "一个轻量级的版本检查工具,用于检测Web应用是否有新版本。支持多种版本比较策略(ETag、Last-Modified、自定义),提供完整的事件系统和错误重试机制。",
   "main": "dist/iife/index.global.js",
   "module": "dist/esm/index.esm.js",
@@ -12,7 +12,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "build:iife": "esbuild src/index.ts --bundle --format=iife --global-name=VersionSentinel --outfile=dist/iife/index.global.js",
+    "build:iife": "esbuild src/index.ts --bundle --format=iife --global-name=VersionSentinel --minify --outfile=dist/iife/index.global.js",
     "build:esm": "esbuild src/index.ts --bundle --format=esm --minify --outfile=dist/esm/index.esm.js",
     "build": "pnpm run clean && pnpm run build:iife && pnpm run build:esm && pnpm run build:types",
     "build:types": "tsc -p tsconfig.json --emitDeclarationOnly",
